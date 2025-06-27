@@ -14,7 +14,7 @@ struct Node{
         }
 };
 
-Node *insert(Node *root, int data){//insertion
+Node *insert(Node *root, int data){ //insertion
     if (root == nullptr){
         return new Node(data);
     }
@@ -70,16 +70,6 @@ Node *lca(Node *root, int v1,int v2) {// lowest common ancestor of two elements
     }
     return nullptr;
 }
-
-// Node *lca(Node *root, int v1,int v2) {
-// 	if(!root) return nullptr;
-//     if(v1 > root->data && v2 > root->data)
-//         return lca(root->right, v1, v2);
-//     else if(v1 < root->data && v2 < root->data)
-//         return lca(root->left, v1, v2);
-//     else 
-//         return root; 
-// }
 
 deque<node*> levelOrder(node *root){
     deque<node*> dq1; deque<node*> dq2;
